@@ -1,0 +1,136 @@
+body{
+	font-family:calibri;
+}
+
+.container{
+	border-left:1px solid #F2F2F2;
+	border-right:1px solid #F2F2F2;
+	box-shadow:0 0 10px #333;
+}
+
+.header{
+	float:left;
+	width:100%;
+	max-height:100%;
+	background-color:#3c8dbc;
+	padding:10 0px;
+}
+
+.header-button{
+	float:right;
+	padding-right:50px;
+}
+
+
+.main{
+	float:left;
+	width:100%;
+	min-height:100%;
+	background-color:#FFFFFF;
+	background-color:#CCC;
+}
+
+.main-left{
+	border-right:1px solid #CCC;
+	float:left;
+	width:165px;
+	height:100%;
+}
+
+.main-left ul{
+	padding:0;
+}
+
+.main-left ul li{
+	list-style:none;
+	padding:10px;
+}
+
+.main-left ul li:hover{
+	background-color:#000;
+}
+
+.main-left a{
+	text-decoration:none;
+	color:#000;
+}
+
+.main-left a li:hover{
+	padding-left:40px;
+	color:#FFFFFF;
+	transition:0.5s;
+}
+
+.main-right{
+	padding:10px;
+	float:right;
+	width:1000px;
+	min-height:100%;
+	background-color:#FFFFFF;
+}
+
+.fix-table{
+	padding:20 0px;
+}
+
+tr td{
+	padding:10px;
+}
+
+.fix-table img{
+	max-width:100%;
+	max-height:100%;
+}
+
+.login{
+	margin-left:500px;
+	margin-top:200px;
+	border:1px solid #CCC;
+	box-shadow:0 0 20px #CCC;
+	width:380px;
+	padding:20px;
+	float:left;
+}
+
+input{
+	padding:5px;
+}
+
+.login-header{
+	text-align:center;
+}
+
+.place button{
+	margin-top:10px;
+	margin-left:130px;
+}
+
+.home{
+	text-align:center;
+}
+
+.homefoto{
+	max-width:30%;
+	max-height:100%;
+	margin-left:350px;
+	border:1px solid #CCC;
+	box-shadow:0 0 10px #000;
+}
+
+.homefoto img{
+	max-width:100%;
+	max-height:100%;
+}
+
+.homebutton{
+	padding-top:10px;
+}
+
+.footer{
+	background-color:#F2F2F2;
+	float:left;
+	width:100%;
+	text-align:center;
+	height:6%;
+	padding:10 0px;
+}
