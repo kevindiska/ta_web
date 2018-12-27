@@ -13,7 +13,7 @@
 	<h1>SELAMAT DATANG<br><?php echo $hasil['nama']; ?></h1>
 	</div>
 	<div class="homefoto">
-		<img src="../data/<?php echo $hasil['foto'];?>" />
+		<img src="../../../data/<?php echo $hasil['foto'];?>" />
 	</div>
 	<div class="homebutton">
 		<button class="btn btn-warning" onclick="javascript:window.location.href='index.php?module=home&action=add&id=<?php echo base64_encode($hasil['username']);?>'">Edit Profile</button>

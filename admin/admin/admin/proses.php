@@ -16,10 +16,11 @@
 		
 	case "add" :
 	
-	$sql=$db->prepare("INSERT INTO admin(username, password, nama, foto) VALUES (:username,  :password, :nama, :foto)");
-	$sql->bindParam(':username', @$username);
-	$sql->bindParam(':password', @$password);
+	$sql=$db->prepare("INSERT INTO admin(id_admin, nama, username, level, foto) VALUES (:id_admin, :nama, :username, :level, :foto)");
+	$sql->bindParam(':id_admin', @$id_admin);
 	$sql->bindParam(':nama', @$nama);
+	$sql->bindParam(':username', @$username);
+	$sql->bindParam(':level', @$level);
 	$sql->bindParam(':foto', @$tujuan);
 	$sql->execute();
 	
@@ -34,10 +35,11 @@
 	
 	case "edit" :
 	
-	$sql=$db->prepare("UPDATE admin SET username = :username, password = :password, nama = :nama, foto = :foto WHERE username = :username");
-	$sql->bindParam(':username', @$username);
-	$sql->bindParam(':password', @$password);
+		$sql=$db->prepare("UPDATE admin SET id_admin = :id_admin, nama = :nama, username = :username, level = :level, foto = :foto, WHERE username = :username");
+	$sql->bindParam(':id_admin', @$id_admin);
 	$sql->bindParam(':nama', @$nama);
+	$sql->bindParam(':username', @$username);
+	$sql->bindParam(':level', @$level);
 	$sql->bindParam(':foto', @$tujuan);
 	$sql->execute();
 	
@@ -52,10 +54,10 @@
 	
 	case "delete" :
 	
-	@$username = @$_GET['id'];
+	@$id_admin = @$_GET['id'];
 	
-	$sql=$db->prepare("DELETE FROM admin WHERE username = :username");
-	$sql->bindParam(':username', @$username);
+	$sql=$db->prepare("DELETE FROM admin WHERE id_admin = :id_admin");
+	$sql->bindParam(':id_admin', @$id_admin);
 	$sql->execute();
 	
 	echo"

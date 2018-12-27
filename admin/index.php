@@ -49,7 +49,7 @@
 						<a href="index.php?module=berita"><li><font>Berita</font></li></a>
 						<a href="index.php?module=galeri"><li><font>Galeri</font></li></a>
 						<a href="index.php?module=kategori_paket"><li><font>Kategori Paket</font></li></a>
-						<a href="index.php?module=metode_bayar"><li><font>Metode Bayar</font>galeri</li></a>
+						<a href="index.php?module=metode_bayar"><li><font>Metode Bayar</font></li></a>
 						<a href="index.php?module=orders"><li><font>Orders</font></li></a>
 						<a href="index.php?module=paket"><li><font>Paket</font></li></a>
 						<a href="index.php?module=pembayaran"><li><font>Pembayaran</font></li></a>
