@@ -18,7 +18,7 @@
 			<tbody>
 			<?php 
 				$no = 1;
-				$sql=$db->prepare("SELECT * FROM tb_data_transaksi_tiket ORDER BY tanggal_berangkat ASC");
+				$sql=$db->prepare("SELECT * FROM data_transaksi_tiket ORDER BY tanggal_berangkat ASC");
 				$sql->execute();
 				while($hasil=$sql->FETCH(PDO::FETCH_ASSOC)){
 			?>

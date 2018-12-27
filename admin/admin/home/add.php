@@ -11,7 +11,7 @@
 <table>
 	<?php
 		$username = @$_GET['id'];
-		$sql=$db->prepare("SELECT * FROM tb_admin WHERE username = '$_SESSION[username]' ");
+		$sql=$db->prepare("SELECT * FROM admin WHERE username = '$_SESSION[username]' ");
 		$sql->bindParam(':username', $username);
 		$sql->execute();
 		$hasil=$sql->FETCH(PDO::FETCH_ASSOC);

@@ -16,7 +16,7 @@
 		
 	case "add" :
 	
-	$sql=$db->prepare("INSERT INTO tb_admin(username, password, nama, foto) VALUES (:username,  :password, :nama, :foto)");
+	$sql=$db->prepare("INSERT INTO admin(username, password, nama, foto) VALUES (:username,  :password, :nama, :foto)");
 	$sql->bindParam(':username', @$username);
 	$sql->bindParam(':password', @$password);
 	$sql->bindParam(':nama', @$nama);
@@ -34,7 +34,7 @@
 	
 	case "edit" :
 	
-	$sql=$db->prepare("UPDATE tb_admin SET username = :username, password = :password, nama = :nama, foto = :foto WHERE username = :username");
+	$sql=$db->prepare("UPDATE admin SET username = :username, password = :password, nama = :nama, foto = :foto WHERE username = :username");
 	$sql->bindParam(':username', @$username);
 	$sql->bindParam(':password', @$password);
 	$sql->bindParam(':nama', @$nama);
@@ -54,7 +54,7 @@
 	
 	@$username = @$_GET['id'];
 	
-	$sql=$db->prepare("DELETE FROM tb_admin WHERE username = :username");
+	$sql=$db->prepare("DELETE FROM admin WHERE username = :username");
 	$sql->bindParam(':username', @$username);
 	$sql->execute();
 	

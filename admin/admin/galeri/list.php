@@ -18,7 +18,7 @@
 			<tbody>
 			<?php 
 				$no = 1;
-				$sql=$db->prepare("SELECT * FROM tb_galeri ORDER BY nama ASC");
+				$sql=$db->prepare("SELECT * FROM galeri ORDER BY nama ASC");
 				$sql->execute();
 				while($hasil=$sql->FETCH(PDO::FETCH_ASSOC)){
 			?>

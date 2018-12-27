@@ -11,7 +11,7 @@
 <table>
 	<?php
 		$id_data_transaksi = @$_GET['id'];
-		$sql=$db->prepare("SELECT * FROM tb_data_transaksi_tiket WHERE id_data_transaksi = :id_data_transaksi ");
+		$sql=$db->prepare("SELECT * FROM data_transaksi_tiket WHERE id_data_transaksi = :id_data_transaksi ");
 		$sql->bindParam(':id_data_transaksi', $id_data_transaksi);
 		$sql->execute();
 		$hasil=$sql->FETCH(PDO::FETCH_ASSOC);

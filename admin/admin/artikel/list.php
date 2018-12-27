@@ -18,7 +18,7 @@
 			<tbody>
 			<?php 
 				$no = 1;
-				$sql=$db->prepare("SELECT * FROM tb_artikel ORDER BY judul ASC");
+				$sql=$db->prepare("SELECT * FROM artikel ORDER BY judul ASC");
 				$sql->execute();
 				while($hasil=$sql->FETCH(PDO::FETCH_ASSOC)){
 			?>

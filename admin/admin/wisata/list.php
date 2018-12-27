@@ -19,7 +19,7 @@
 			<tbody>
 			<?php 
 				$no = 1;
-				$sql=$db->prepare("SELECT * FROM tb_wisata ORDER BY id_wisata ASC");
+				$sql=$db->prepare("SELECT * FROM wisata ORDER BY id_wisata ASC");
 				$sql->execute();
 				while($hasil=$sql->FETCH(PDO::FETCH_ASSOC)){
 			?>

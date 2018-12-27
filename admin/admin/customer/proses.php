@@ -19,7 +19,7 @@
 		
 	case "add" :
 	
-	$sql=$db->prepare("INSERT INTO tb_customer(nama, password, username, email, no_hp, jk, alamat) VALUES (:nama, :password, :username, :email, :no_hp, :jk, :alamat)");
+	$sql=$db->prepare("INSERT INTO customer(nama, password, username, email, no_hp, jk, alamat) VALUES (:nama, :password, :username, :email, :no_hp, :jk, :alamat)");
 	$sql->bindParam(':nama', @$nama);
 	$sql->bindParam(':password', @$password);
 	$sql->bindParam(':username', @$username);
@@ -40,7 +40,7 @@
 	
 	case "edit" :
 	
-	$sql=$db->prepare("UPDATE tb_customer SET nama =:nama, password =:password, username =:username, email =:email, no_hp =:no_hp, jk =:jk, alamat =:alamat  WHERE id_customer = :id_customer");
+	$sql=$db->prepare("UPDATE customer SET nama =:nama, password =:password, username =:username, email =:email, no_hp =:no_hp, jk =:jk, alamat =:alamat  WHERE id_customer = :id_customer");
 	$sql->bindParam(':id_customer', @$id_customer);
 	$sql->bindParam(':nama', @$nama);
 	$sql->bindParam(':password', @$password);
@@ -64,7 +64,7 @@
 	
 	@$id_customer = @$_GET['id'];
 	
-	$sql=$db->prepare("DELETE FROM tb_customer WHERE id_customer = :id_customer");
+	$sql=$db->prepare("DELETE FROM customer WHERE id_customer = :id_customer");
 	$sql->bindParam(':id_customer', @$id_customer);
 	$sql->execute();
 	

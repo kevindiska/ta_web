@@ -18,7 +18,7 @@
 		
 	case "add" :
 	
-	$sql=$db->prepare("INSERT INTO tb_hotel(nama, alamat, no_telp, jarak, foto) VALUES (:nama, :alamat, :no_telp, :jarak, :foto)");
+	$sql=$db->prepare("INSERT INTO hotel(nama, alamat, no_telp, jarak, foto) VALUES (:nama, :alamat, :no_telp, :jarak, :foto)");
 	$sql->bindParam(':nama', @$nama);
 	$sql->bindParam(':alamat', @$alamat);
 	$sql->bindParam(':no_telp', @$no_telp);
@@ -37,7 +37,7 @@
 	
 	case "edit" :
 	
-	$sql=$db->prepare("UPDATE tb_hotel SET nama = :nama, alamat = :alamat, no_telp = :no_telp, jarak = :jarak, foto = :foto WHERE id_hotel = :id_hotel");
+	$sql=$db->prepare("UPDATE hotel SET nama = :nama, alamat = :alamat, no_telp = :no_telp, jarak = :jarak, foto = :foto WHERE id_hotel = :id_hotel");
 	$sql->bindParam(':id_hotel', @$id_hotel);
 	$sql->bindParam(':nama', @$nama);
 	$sql->bindParam(':alamat', @$alamat);
@@ -59,7 +59,7 @@
 	
 	@$id_hotel = @$_GET['id'];
 	
-	$sql=$db->prepare("DELETE FROM tb_hotel WHERE id_hotel = :id_hotel");
+	$sql=$db->prepare("DELETE FROM hotel WHERE id_hotel = :id_hotel");
 	$sql->bindParam(':id_hotel', @$id_hotel);
 	$sql->execute();
 	

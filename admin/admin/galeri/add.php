@@ -11,7 +11,7 @@
 <table>
 	<?php
 		$id_galeri = @$_GET['id'];
-		$sql=$db->prepare("SELECT * FROM tb_galeri WHERE id_galeri = :id_galeri ");
+		$sql=$db->prepare("SELECT * FROM galeri WHERE id_galeri = :id_galeri ");
 		$sql->bindParam(':id_galeri', $id_galeri);
 		$sql->execute();
 		$hasil=$sql->FETCH(PDO::FETCH_ASSOC);

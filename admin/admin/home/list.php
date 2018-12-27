@@ -3,7 +3,7 @@
 ?>
 <?php
 	
-	$sql=$db->prepare("SELECT * FROM tb_admin WHERE username = '$_SESSION[username]'");
+	$sql=$db->prepare("SELECT * FROM admin WHERE username = '$_SESSION[username]'");
 	$sql->execute();
 	while($hasil=$sql->FETCH(PDO::FETCH_ASSOC)){
 	

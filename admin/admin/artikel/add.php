@@ -11,7 +11,7 @@
 <table>
 	<?php
 		$id_artikel = @$_GET['id'];
-		$sql=$db->prepare("SELECT * FROM tb_artikel WHERE id_artikel = :id_artikel ");
+		$sql=$db->prepare("SELECT * FROM artikel WHERE id_artikel = :id_artikel ");
 		$sql->bindParam(':id_artikel', $id_artikel);
 		$sql->execute();
 		$hasil=$sql->FETCH(PDO::FETCH_ASSOC);

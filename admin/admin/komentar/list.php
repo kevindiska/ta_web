@@ -17,7 +17,7 @@
 			<tbody>
 			<?php 
 				$no = 1;
-				$sql=$db->prepare("SELECT * FROM tb_komentar ORDER BY komentar ASC");
+				$sql=$db->prepare("SELECT * FROM komentar ORDER BY komentar ASC");
 				$sql->execute();
 				while($hasil=$sql->FETCH(PDO::FETCH_ASSOC)){
 			?>

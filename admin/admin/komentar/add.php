@@ -11,7 +11,7 @@
 <table>
 	<?php
 		$id_komentar = @$_GET['id'];
-		$sql=$db->prepare("SELECT * FROM tb_komentar WHERE id_komentar = :id_komentar ");
+		$sql=$db->prepare("SELECT * FROM komentar WHERE id_komentar = :id_komentar ");
 		$sql->bindParam(':id_komentar', $id_komentar);
 		$sql->execute();
 		$hasil=$sql->FETCH(PDO::FETCH_ASSOC);

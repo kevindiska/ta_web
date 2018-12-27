@@ -15,7 +15,7 @@
 		
 	case "add" :
 	
-	$sql=$db->prepare("INSERT INTO tb_data_transaksi_tiket(tanggal_berangkat, tanggal_pembayaran, total_pembayaran) VALUES (:tanggal_berangkat, :tanggal_pembayaran, :total_pembayaran)");
+	$sql=$db->prepare("INSERT INTO data_transaksi_tiket(tanggal_berangkat, tanggal_pembayaran, total_pembayaran) VALUES (:tanggal_berangkat, :tanggal_pembayaran, :total_pembayaran)");
 	$sql->bindParam(':tanggal_berangkat', @$tanggal_berangkat);
 	$sql->bindParam(':tanggal_pembayaran', @$tanggal_pembayaran);
 	$sql->bindParam(':total_pembayaran', @$total_pembayaran);
@@ -32,7 +32,7 @@
 	
 	case "edit" :
 	
-	$sql=$db->prepare("UPDATE tb_data_transaksi_tiket SET tanggal_berangkat = :tanggal_berangkat, tanggal_pembayaran = :tanggal_pembayaran, total_pembayaran = :total_pembayaran WHERE id_data_transaksi = :id_data_transaksi");
+	$sql=$db->prepare("UPDATE data_transaksi_tiket SET tanggal_berangkat = :tanggal_berangkat, tanggal_pembayaran = :tanggal_pembayaran, total_pembayaran = :total_pembayaran WHERE id_data_transaksi = :id_data_transaksi");
 	$sql->bindParam(':id_data_transaksi', @$id_data_transaksi);
 	$sql->bindParam(':tanggal_berangkat', @$tanggal_berangkat);
 	$sql->bindParam(':tanggal_pembayaran', @$tanggal_pembayaran);
@@ -52,7 +52,7 @@
 	
 	@$id_data_transaksi = @$_GET['id'];
 	
-	$sql=$db->prepare("DELETE FROM tb_data_transaksi_tiket WHERE id_data_transaksi = :id_data_transaksi");
+	$sql=$db->prepare("DELETE FROM data_transaksi_tiket WHERE id_data_transaksi = :id_data_transaksi");
 	$sql->bindParam(':id_data_transaksi', @$id_data_transaksi);
 	$sql->execute();
 	

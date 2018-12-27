@@ -11,7 +11,7 @@
 <table>
 	<?php
 		$id_customer = @$_GET['id'];
-		$sql=$db->prepare("SELECT * FROM tb_customer WHERE id_customer = :id_customer ");
+		$sql=$db->prepare("SELECT * FROM customer WHERE id_customer = :id_customer ");
 		$sql->bindParam(':id_customer', $id_customer);
 		$sql->execute();
 		$hasil=$sql->FETCH(PDO::FETCH_ASSOC);

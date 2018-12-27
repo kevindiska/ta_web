@@ -14,7 +14,7 @@
 		
 	case "add" :
 	
-	$sql=$db->prepare("INSERT INTO tb_komentar(komentar, tanggal) VALUES (:komentar, :tanggal)");
+	$sql=$db->prepare("INSERT INTO komentar(komentar, tanggal) VALUES (:komentar, :tanggal)");
 	$sql->bindParam(':komentar', @$komentar);
 	$sql->bindParam(':tanggal', @$tanggal);
 	$sql->execute();
@@ -30,7 +30,7 @@
 	
 	case "edit" :
 	
-	$sql=$db->prepare("UPDATE tb_komentar SET komentar = :komentar, tanggal = :tanggal WHERE id_komentar = :id_komentar");
+	$sql=$db->prepare("UPDATE komentar SET komentar = :komentar, tanggal = :tanggal WHERE id_komentar = :id_komentar");
 	$sql->bindParam(':id_komentar', @$id_komentar);
 	$sql->bindParam(':komentar', @$komentar);
 	$sql->bindParam(':tanggal', @$tanggal);
@@ -49,7 +49,7 @@
 	
 	@$id_komentar = @$_GET['id'];
 	
-	$sql=$db->prepare("DELETE FROM tb_komentar WHERE id_komentar = :id_komentar");
+	$sql=$db->prepare("DELETE FROM komentar WHERE id_komentar = :id_komentar");
 	$sql->bindParam(':id_komentar', @$id_komentar);
 	$sql->execute();
 	

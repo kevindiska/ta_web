@@ -16,7 +16,7 @@
 		
 	case "add" :
 	
-	$sql=$db->prepare("INSERT INTO tb_wisata(nama_wisata, alamat_wisata, jam_oprasional, ket_wisata) VALUES (:nama_wisata, :alamat_wisata, :jam_oprasional, :ket_wisata)");
+	$sql=$db->prepare("INSERT INTO wisata(nama_wisata, alamat_wisata, jam_oprasional, ket_wisata) VALUES (:nama_wisata, :alamat_wisata, :jam_oprasional, :ket_wisata)");
 	$sql->bindParam(':nama_wisata', @$nama_wisata);
 	$sql->bindParam(':alamat_wisata', @$alamat_wisata);
 	$sql->bindParam(':jam_oprasional', @$jam_oprasional);
@@ -34,7 +34,7 @@
 	
 	case "edit" :
 	
-	$sql=$db->prepare("UPDATE tb_wisata SET nama_wisata = :nama_wisata, alamat_wisata = :alamat_wisata, jam_oprasional = :jam_oprasional, ket_wisata = :ket_wisata WHERE id_wisata = :id_wisata");
+	$sql=$db->prepare("UPDATE wisata SET nama_wisata = :nama_wisata, alamat_wisata = :alamat_wisata, jam_oprasional = :jam_oprasional, ket_wisata = :ket_wisata WHERE id_wisata = :id_wisata");
 	$sql->bindParam(':id_wisata', @$id_wisata);
 	$sql->bindParam(':nama_wisata', @$nama_wisata);
 	$sql->bindParam(':alamat_wisata', @$alamat_wisata);
@@ -55,7 +55,7 @@
 	
 	@$id_wisata = @$_GET['id'];
 	
-	$sql=$db->prepare("DELETE FROM tb_wisata WHERE id_wisata = :id_wisata");
+	$sql=$db->prepare("DELETE FROM wisata WHERE id_wisata = :id_wisata");
 	$sql->bindParam(':id_wisata', @$id_wisata);
 	$sql->execute();
 	

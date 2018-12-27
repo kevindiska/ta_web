@@ -17,7 +17,7 @@
 			<tbody>
 			<?php 
 				$no = 1;
-				$sql=$db->prepare("SELECT * FROM tb_type_kamar ORDER BY nama ASC");
+				$sql=$db->prepare("SELECT * FROM type_kamar ORDER BY nama ASC");
 				$sql->execute();
 				while($hasil=$sql->FETCH(PDO::FETCH_ASSOC)){
 			?>

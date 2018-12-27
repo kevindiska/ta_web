@@ -17,7 +17,7 @@
 		
 	case "edit" :
 	
-	$sql=$db->prepare("UPDATE tb_admin SET username = :username, password = :password, nama = :nama, jk = :jk, foto = :foto WHERE username = :username");
+	$sql=$db->prepare("UPDATE admin SET username = :username, password = :password, nama = :nama, jk = :jk, foto = :foto WHERE username = :username");
 	$sql->bindParam(':username', @$username);
 	$sql->bindParam(':password', @$password);
 	$sql->bindParam(':nama', @$nama);

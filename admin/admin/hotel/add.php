@@ -11,7 +11,7 @@
 <table>
 	<?php
 		$id_hotel = @$_GET['id'];
-		$sql=$db->prepare("SELECT * FROM tb_hotel WHERE id_hotel = :id_hotel ");
+		$sql=$db->prepare("SELECT * FROM hotel WHERE id_hotel = :id_hotel ");
 		$sql->bindParam(':id_hotel', $id_hotel);
 		$sql->execute();
 		$hasil=$sql->FETCH(PDO::FETCH_ASSOC);

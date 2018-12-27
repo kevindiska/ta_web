@@ -74,7 +74,7 @@
 				</div>
 			</div>
 			<div class="footer">
-				<font>&copy; COPYRIGHT MONKASEL</font>
+				<font>&copy; COPYRIGHT PANDAWA RESORT</font>
 			</div>
 		</div>
 		<script>

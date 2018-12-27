@@ -11,7 +11,7 @@
 <table>
 	<?php
 		$id_tiket = @$_GET['id'];
-		$sql=$db->prepare("SELECT * FROM tb_tiket WHERE id_tiket = :id_tiket ");
+		$sql=$db->prepare("SELECT * FROM tiket WHERE id_tiket = :id_tiket ");
 		$sql->bindParam(':id_tiket', $id_tiket);
 		$sql->execute();
 		$hasil=$sql->FETCH(PDO::FETCH_ASSOC);
