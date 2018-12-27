@@ -1,6 +1,6 @@
 <html>
 	<head>
-		<title>MONKASEL</title>
+		<title>PANDAWA RESORT</title>
 		<link rel="shorcut icon" href="../data/smkn12.png" />
 		<link rel="stylesheet" href="../style/backend/css/style.css" />
 		<link rel="stylesheet" href="../style/backend/css/bootstrap.css" />

@@ -15,7 +15,7 @@
 ?>
 <html>
 	<head>
-		<title>MONKASEL</title>
+		<title>PANDAWA RESORT</title>
 		<link rel="shorcut icon" href="../data/smkn12.png" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		
@@ -45,16 +45,17 @@
 					<ul>
 						<a href="index.php"><li><font>Home</font></li></a>
 						<a href="index.php?module=admin"><li><font>Admin</font></li></a>
-						<a href="index.php?module=artikel"><li><font>Artikel</font></li></a>
-						<a href="index.php?module=customer"><li><font>Customer</font></li></a>
-						<a href="index.php?module=data_transaksi_tiket"><li><font>Data Transaksi Tiket</font></li></a>
-						<a href="index.php?module=fasilitas_wisata"><li><font>Fasilitas Wisata</font></li></a>
+						<a href="index.php?module=album"><li><font>Album</font></li></a>
+						<a href="index.php?module=berita"><li><font>Berita</font></li></a>
 						<a href="index.php?module=galeri"><li><font>Galeri</font></li></a>
-						<a href="index.php?module=hotel"><li><font>Hotel</font></li></a>
-						<a href="index.php?module=kamar"><li><font>Kamar</font></li></a>
-						<a href="index.php?module=komentar"><li><font>Komentar</font></li></a>
-						<a href="index.php?module=tiket"><li><font>Tiket</font></li></a>
-						<a href="index.php?module=type_kamar"><li><font>Type Kamar</font></li></a>
+						<a href="index.php?module=kategori_paket"><li><font>Kategori Paket</font></li></a>
+						<a href="index.php?module=metode_bayar"><li><font>Metode Bayar</font>galeri</li></a>
+						<a href="index.php?module=orders"><li><font>Orders</font></li></a>
+						<a href="index.php?module=paket"><li><font>Paket</font></li></a>
+						<a href="index.php?module=pembayaran"><li><font>Pembayaran</font></li></a>
+						<a href="index.php?module=tbl_inbox"><li><font>Tabel Inbox</font></li></a>
+						<a href="index.php?module=tbl_pengunjung"><li><font>Tabel Pengunjung</font></li></a>
+						<a href="index.php?module=testimoni"><li><font>Testimoni</font></li></a>
 						<a href="index.php?module=wisata"><li><font>Wisata</font></li></a>
 					</ul>
 				</div>
