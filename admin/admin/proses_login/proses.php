@@ -3,7 +3,7 @@
 	$username = $_POST['username'];
 	$password = $_POST['password'];
 	
-	$sql=$db->prepare("SELECT * FROM tb_admin WHERE username='$username' AND password='$password'");
+	$sql=$db->prepare("SELECT * FROM admin WHERE username='$username' AND password='$password'");
 	$sql->execute();
 	$hasil=$sql->rowCount();
 	
