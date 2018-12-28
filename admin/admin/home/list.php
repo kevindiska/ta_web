@@ -12,8 +12,9 @@
 	<div class="hometop">
 	<h1>SELAMAT DATANG<br><?php echo $hasil['nama']; ?></h1>
 	</div>
+		<p><?php echo $hasil['photo'];?></p>
 	<div class="homefoto">
-		<img src="../../../data/<?php echo $hasil['foto'];?>" />
+		<img src="./data/34650319_1671439606306193_7236283946818863104_n.jpg />
 	</div>
 	<div class="homebutton">
 		<button class="btn btn-warning" onclick="javascript:window.location.href='index.php?module=home&action=add&id=<?php echo base64_encode($hasil['username']);?>'">Edit Profile</button>

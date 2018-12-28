@@ -9,10 +9,10 @@
 			<thead>
 				<tr>
 					<th width="1%">No</td>
-					<th width="10%">Nama Wisata</td>
-					<th width="10%">Alamat WIsata</td>
-					<th width="10%">Jam Oprasional</td>
-					<th width="10%">Keterangan Wisata</td>
+					<th width="10%">id_wisata</th>
+					<th width="10%">nama_wisata</th>
+					<th width="10%">deskripsi</th>
+					<th width="10%">gambar</th>
 					<th width="20%">Option</td>
 				</tr>
 			</thead>
@@ -25,10 +25,10 @@
 			?>
 			<tr>
 				<td><?php echo $no; ?></td>
+				<td><?php echo $hasil['id_wisata'];?></td>
 				<td><?php echo $hasil['nama_wisata'];?></td>
-				<td><?php echo $hasil['alamat_wisata'];?></td>
-				<td><?php echo $hasil['jam_oprasional'];?></td>
-				<td><?php echo $hasil['ket_wisata'];?></td>
+				<td><?php echo $hasil['deskripsi'];?></td>
+				<td><img src="../data/<?php echo $hasil['gambar'];?>" /></td>
 				<td>
 					<button class="btn btn-warning" onclick="javascript:window.location.href='index.php?module=wisata&action=add&id=<?php echo $hasil['id_wisata'];?>'">EDIT</button>
 					<button class="btn btn-danger" onclick="javascript:window.location.href='index.php?module=wisata&action=proses&id=<?php echo $hasil['id_wisata'];?>&proc=delete'">DELETE</button>

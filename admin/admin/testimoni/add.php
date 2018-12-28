@@ -17,24 +17,31 @@
 		$hasil=$sql->FETCH(PDO::FETCH_ASSOC);
 	?>
 	<tr>
+		<td>ID Testimoni</td>
+		<td>:</td>
+		<td>
+			<input type="text" name="id_testimoni" value="<?php echo @$hasil['id_testimoni'];?>" placeholder="Ketikkan ID" />
+		</td>
+	</tr>
+	<tr>
 		<td>Nama</td>
 		<td>:</td>
 		<td>
-			<input type="text" name="nama" value="<?php echo @$hasil['nama'];?>" placeholder="Ketikkan nama" />
+			<input type="text" name="nama" value="<?php echo @$hasil['nama'];?>" placeholder="Ketikkan Nama" />
 		</td>
 	</tr>
 	<tr>
-		<td>Foto</td>
+		<td>E-Mail</td>
 		<td>:</td>
 		<td>
-			<input type="file" name="foto" />
+			<input type="text" name="email" value="<?php echo @$hasil['email'];?>" placeholder="Ketikkan E-mail" />
 		</td>
 	</tr>
 	<tr>
-		<td>Keterangan</td>
+		<td>Pesan</td>
 		<td>:</td>
 		<td>
-			<input type="text" name="keterangan" value="<?php echo @$hasil['keterangan'];?>" placeholder="Ketikkan keterangan" />
+			<input type="text" name="pesan" value="<?php echo @$hasil['pesan'];?>" placeholder="Ketikkan Pesan" />
 		</td>
 	</tr>
 </table>
