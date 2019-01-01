@@ -9,13 +9,13 @@
 			<thead>
 				<tr>
 					<th width="1%">No</td>
-					<th width="10%">inbox_id</th>
-					<th width="10%">inbox_nama</th>
-					<th width="10%">inbox_email</th>
-					<th width="10%">inbox_kontak</th>
-					<th width="10%">inbox_pesan</th>
-					<th width="10%">inbox_tanggal</th>
-					<th width="10%">inbox_status</th>
+					<th width="10%">Inbox Id</th>
+					<th width="10%">Inbox Nama</th>
+					<th width="10%">Inbox Email</th>
+					<th width="10%">Inbox Kontak</th>
+					<th width="10%">Inbox Pesan</th>
+					<th width="10%">Inbox Tanggal</th>
+					<th width="10%">Inbox Status</th>
 					<th width="20%">Option</td>
 				</tr>
 			</thead>

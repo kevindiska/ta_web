@@ -9,11 +9,11 @@
 			<thead>
 				<tr>
 					<th width="1%">No</td>
-					<th width="10%">id_metode</td>
-					<th width="10%">metode</td>
-					<th width="10%">bank</td>
-					<th width="10%">no_rek</td>
-					<th width="10%">atas_nama</td>
+					<th width="10%">ID Metode</td>
+					<th width="10%">Metode</td>
+					<th width="10%">Bank</td>
+					<th width="10%">No Rekening</td>
+					<th width="10%">Atas Nama</td>
 					<th width="20%">Option</td>
 				</tr>
 			</thead>

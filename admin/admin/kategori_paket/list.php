@@ -9,7 +9,7 @@
 			<thead>
 				<tr>
 					<th width="1%">No</td>
-					<th width="10%">Id Kategori</td>
+					<th width="10%">ID Kategori</td>
 					<th width="10%">Kategori</td>
 					<th width="20%">Option</td>
 				</tr>

@@ -9,7 +9,7 @@
 			<thead>
 				<tr>
 					<th width="1%">No</td>
-					<th width="10%">Id Bayar</th>
+					<th width="10%">ID Bayar</th>
 					<th width="10%">Tanggal Bayar</th>
 					<th width="10%">Metode Id Bayar</th>
 					<th width="10%">Order Id</th>

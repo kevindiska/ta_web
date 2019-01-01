@@ -9,10 +9,10 @@
 			<thead>
 				<tr>
 					<th width="1%">No</td>
-					<th width="10%">id_wisata</th>
-					<th width="10%">nama_wisata</th>
-					<th width="10%">deskripsi</th>
-					<th width="10%">gambar</th>
+					<th width="10%">ID Wisata</th>
+					<th width="10%">Nama Wisata</th>
+					<th width="10%">Deskripsi</th>
+					<th width="10%">Gambar</th>
 					<th width="20%">Option</td>
 				</tr>
 			</thead>

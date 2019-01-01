@@ -9,9 +9,9 @@
 			<thead>
 				<tr>
 					<th width="1%">No</td>
-					<th width="10%">Id Testimoni</th>
+					<th width="10%">ID Testimoni</th>
 					<th width="10%">Nama</th>
-					<th width="10%">Email</th>
+					<th width="10%">E-Mail</th>
 					<th width="10%">Pesan</th>
 					<th width="10%">Status</th>
 					<th width="10%">Tangal Post</th>

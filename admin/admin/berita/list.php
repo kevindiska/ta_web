@@ -9,14 +9,14 @@
 			<thead>
 				<tr>
 					<th width="1%">No</td>
-					<th width="10%">id_berita</th>
-					<th width="10%">judul</th>
-					<th width="10%">isi</th>
-					<th width="10%">tgl_post</th>
-					<th width="10%">gambar</th>
-					<th width="10%">tgl_last_update</th>
-					<th width="10%">user</th>
-					<th width="10%">views</th>
+					<th width="10%">ID berita</th>
+					<th width="10%">Judul</th>
+					<th width="10%">Isi</th>
+					<th width="10%">Tangal Post</th>
+					<th width="10%">Gambar</th>
+					<th width="10%">Tanggal Last Update</th>
+					<th width="10%">User</th>
+					<th width="10%">Views</th>
 					<th width="20%">Option</td>
 				</tr>
 			</thead>
