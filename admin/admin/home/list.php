@@ -14,7 +14,7 @@
 	</div>
 		<p><?php echo $hasil['photo'];?></p>
 	<div class="homefoto">
-		<img src="./data/34650319_1671439606306193_7236283946818863104_n.jpg />
+		<img src="../../../data/34650319_1671439606306193_7236283946818863104_n.jpg" />
 	</div>
 	<div class="homebutton">
 		<button class="btn btn-warning" onclick="javascript:window.location.href='index.php?module=home&action=add&id=<?php echo base64_encode($hasil['username']);?>'">Edit Profile</button>
