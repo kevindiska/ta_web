@@ -41,8 +41,13 @@
 		<td>JK</td>
 		<td>:</td>
 		<td>
+<<<<<<< HEAD
+			<input type="radio" name="jk" <?php if (isset($jk) && $gender=="L") echo "checked";?> value="L">Laki-laki
+			<input type="radio" name="jk" <?php if (isset($jk) && $gender=="P") echo "checked";?> value="P">Perempuan
+=======
 			<input type="radio" name="jk" value="L" /> Laki-laki
 			<input type="radio" name="jk" value="P" /> Perempuan
+>>>>>>> master
 		</td>
 	</tr>
 	<tr>

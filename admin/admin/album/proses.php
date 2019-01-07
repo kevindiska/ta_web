@@ -4,28 +4,29 @@
 	
 	@$proc = @$_REQUEST['proc'];
 	
-	@$id_galeri = @$_POST['id_galeri'];
-	@$nama = @$_POST['nama'];
-	@$asal = @$_FILES['foto']['tmp_name'];
-	@$tujuan = @$_FILES['foto']['name'];
-	@$keterangan = @$_POST['keterangan'];
+	@$id_album = @$_POST['id_album'];
+	@$nama = @$_POST['judul_album'];
+	@$asal = @$_FILES['cover']['tmp_name'];
+	@$tujuan = @$_FILES['cover']['name'];
+	@$keterangan = @$_POST['jumlah'];
 	
-	move_uploaded_file(@$asal, "../data/".@$tujuan);
+	move_uploaded_file(@$asal, "../img/album".@$tujuan);
 	
 	switch(@$proc){
 		
 	case "add" :
 	
-	$sql=$db->prepare("INSERT INTO galeri(nama,  foto, keterangan) VALUES (:nama,  :foto, :keterangan)");
-	$sql->bindParam(':nama', @$nama);
-	$sql->bindParam(':foto', @$tujuan);
-	$sql->bindParam(':keterangan', @$keterangan);
+	$sql=$db->prepare("INSERT INTO album( id_album, judul_album, cover, jumlah) VALUES ( :id_album, :judul_album, :cover, :jumlah)");
+	$sql->bindParam(':id_album', @$id_album);
+	$sql->bindParam(':judul_album', @$judul_album);
+	$sql->bindParam(':cover', @$cover);
+	$sql->bindParam(':jumlah', @$jumlah);
 	$sql->execute();
 	
 	echo"
 		<script>
 			alert('Apakah anda ingin membuat');
-			window.location.href='index.php?module=galeri';
+			window.location.href='index.php?module=album';
 		</script>
 	";
 
@@ -33,17 +34,17 @@
 	
 	case "edit" :
 	
-	$sql=$db->prepare("UPDATE galeri SET nama = :nama, foto = :foto, keterangan = :keterangan WHERE id_galeri = :id_galeri");
-	$sql->bindParam(':id_galeri', @$id_galeri);
-	$sql->bindParam(':nama', @$nama);
-	$sql->bindParam(':foto', @$tujuan);
-	$sql->bindParam(':keterangan', @$keterangan);
+		$sql=$db->prepare("UPDATE album SET id_album = :id_album, judul_album = :judul_album, cover = :cover, jumlah = :jumlah WHERE id_album = :id_album");
+	$sql->bindParam(':id_album', @$id_album);
+	$sql->bindParam(':judul_album', @$judul_album);
+	$sql->bindParam(':cover', @$cover);
+	$sql->bindParam(':jumlah', @$jumlah);
 	$sql->execute();
 	
 	echo"
 		<script>
 			alert('Apakah anda ingin merubah');
-			window.location.href='index.php?module=galeri';
+			window.location.href='index.php?module=album';
 		</script>
 	";
 	
@@ -51,16 +52,16 @@
 	
 	case "delete" :
 	
-	@$id_galeri = @$_GET['id'];
+	@$id_album = @$_GET['id'];
 	
-	$sql=$db->prepare("DELETE FROM galeri WHERE id_galeri = :id_galeri");
-	$sql->bindParam(':id_galeri', @$id_galeri);
+	$sql=$db->prepare("DELETE FROM album WHERE id_album = :id_album");
+	$sql->bindParam(':id_album', @$id_album);
 	$sql->execute();
 	
 	echo"
 		<script>
 			alert('Apakah anda ingin menghapus');
-			window.location.href='index.php?module=galeri';
+			window.location.href='index.php?module=album';
 		</script>
 	";
 	

@@ -7,7 +7,11 @@
 	@$username = @$_POST['username'];
 	@$password = @$_POST['password'];
 	@$nama = @$_POST['nama'];
+<<<<<<< HEAD
+	@$nama = @$_POST['jk'];
+=======
 	#@$nama = @$_POST['jk'];
+>>>>>>> master
 	@$nama = @$_POST['level'];
 	@$asal = @$_FILES['photo']['tmp_name'];
 	@$tujuan = @$_FILES['photo']['name'];
