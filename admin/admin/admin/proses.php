@@ -7,21 +7,24 @@
 	@$username = @$_POST['username'];
 	@$password = @$_POST['password'];
 	@$nama = @$_POST['nama'];
-	@$asal = @$_FILES['foto']['tmp_name'];
-	@$tujuan = @$_FILES['foto']['name'];
+	#@$nama = @$_POST['jk'];
+	@$nama = @$_POST['level'];
+	@$asal = @$_FILES['photo']['tmp_name'];
+	@$tujuan = @$_FILES['photo']['name'];
 	
-	move_uploaded_file(@$asal, "../data/".@$tujuan);
+	move_uploaded_file(@$asal, "../img/admin/".@$tujuan);
 	
 	switch(@$proc){
 		
 	case "add" :
 	
-	$sql=$db->prepare("INSERT INTO admin(id_admin, nama, username, level, foto) VALUES (:id_admin, :nama, :username, :level, :foto)");
-	$sql->bindParam(':id_admin', @$id_admin);
-	$sql->bindParam(':nama', @$nama);
+	$sql=$db->prepare("INSERT INTO admin( username, password, nama, jk, level, photo) VALUES ( :username, :password, :nama, :jk, :level, :photo)");
 	$sql->bindParam(':username', @$username);
+	$sql->bindParam(':password', @$password);
+	$sql->bindParam(':nama', @$nama);
+	$sql->bindParam(':jk', @$jk);
 	$sql->bindParam(':level', @$level);
-	$sql->bindParam(':foto', @$tujuan);
+	$sql->bindParam(':photo', @$tujuan);
 	$sql->execute();
 	
 	echo"
@@ -35,12 +38,13 @@
 	
 	case "edit" :
 	
-		$sql=$db->prepare("UPDATE admin SET id_admin = :id_admin, nama = :nama, username = :username, level = :level, foto = :foto, WHERE username = :username");
-	$sql->bindParam(':id_admin', @$id_admin);
-	$sql->bindParam(':nama', @$nama);
+	$sql=$db->prepare("UPDATE admin SET username = :username, password = :password, nama = :nama, jk = :jk, level = :level, photo = :photo, WHERE username = :username");
 	$sql->bindParam(':username', @$username);
+	$sql->bindParam(':password', @$password);
+	$sql->bindParam(':nama', @$nama);
+	$sql->bindParam(':jk', @$jk);
 	$sql->bindParam(':level', @$level);
-	$sql->bindParam(':foto', @$tujuan);
+	$sql->bindParam(':photo', @$tujuan);
 	$sql->execute();
 	
 	echo"
@@ -54,10 +58,10 @@
 	
 	case "delete" :
 	
-	@$id_admin = @$_GET['id'];
+	@$username = @$_GET['id'];
 	
-	$sql=$db->prepare("DELETE FROM admin WHERE id_admin = :id_admin");
-	$sql->bindParam(':id_admin', @$id_admin);
+	$sql=$db->prepare("DELETE FROM admin WHERE username = :username");
+	$sql->bindParam(':username', @$username);
 	$sql->execute();
 	
 	echo"

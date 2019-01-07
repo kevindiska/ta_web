@@ -27,7 +27,7 @@
 				<td><?php echo $no; ?></td>
 				<td><?php echo $hasil['id_galeri'];?></td>
 				<td><?php echo $hasil['judul_galeri'];?></td>
-				<td><img src="../data/<?php echo $hasil['gambar_galeri'];?>" /></td>
+				<td><img src="../img/galeri/<?php echo $hasil['gambar_galeri'];?>" /></td>
 				<td><?php echo $hasil['album_id'];?></td>
 				<td>
 					<button class="btn btn-warning" onclick="javascript:window.location.href='index.php?module=galeri&action=add&id=<?php echo $hasil['id_galeri'];?>'">EDIT</button>

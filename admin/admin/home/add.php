@@ -38,17 +38,30 @@
 		</td>
 	</tr>
 	<tr>
-		<td>Jk</td>
+		<td>JK</td>
 		<td>:</td>
 		<td>
-			<input type="text" name="jk" value="<?php echo @$hasil['jk'];?>" placeholder="Ketikkan jk" />
+			<input type="radio" name="jk" value="L" /> Laki-laki
+			<input type="radio" name="jk" value="P" /> Perempuan
+		</td>
+	</tr>
+	<tr>
+		<td>Level</td>
+		<td>:</td>
+		<td>
+			<select name="level">
+				<option value=""></option>
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+			</select>
 		</td>
 	</tr>
 	<tr>
 		<td>Foto</td>
 		<td>:</td>
 		<td>
-			<input type="file" name="foto" />
+			<input type="file" name="photo" />
 		</td>
 	</tr>
 </table>

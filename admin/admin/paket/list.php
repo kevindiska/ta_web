@@ -34,7 +34,7 @@
 				<td><?php echo $hasil['harga_anak'];?></td>
 				<td><?php echo $hasil['deskripsi'];?></td>
 				<td><?php echo $hasil['kategori_id'];?></td>
-				<td><img src="../data/<?php echo $hasil['gambar'];?>" /></td>
+				<td><img src="../img/paket/<?php echo $hasil['gambar'];?>" /></td>
 				<td>
 					<button class="btn btn-warning" onclick="javascript:window.location.href='index.php?module=paket&action=add&id=<?php echo $hasil['id_paket'];?>'">EDIT</button>
 					<button class="btn btn-danger" onclick="javascript:window.location.href='index.php?module=paket&action=proses&id=<?php echo $hasil['id_paket'];?>&proc=delete'">DELETE</button>

@@ -27,7 +27,7 @@
 				<td><?php echo $no; ?></td>
 				<td><?php echo $hasil['id_album'];?></td>
 				<td><?php echo $hasil['judul_album'];?></td>
-				<td><img src="../data/<?php echo $hasil['cover'];?>" /></td>
+				<td><img src="../img/album/<?php echo $hasil['cover'];?>" /></td>
 				<td><?php echo $hasil['jumlah'];?></td>
 				<td>
 					<button class="btn btn-warning" onclick="javascript:window.location.href='index.php?module=album&action=add&id=<?php echo $hasil['id_album'];?>'">EDIT</button>

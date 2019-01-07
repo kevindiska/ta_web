@@ -6,9 +6,8 @@
 	
 	@$id_wisata = @$_POST['id_wisata'];
 	@$nama_wisata = @$_POST['nama_wisata'];
-	@$alamat_wisata = @$_POST['alamat_wisata'];
-	@$jam_oprasional = @$_POST['jam_oprasional'];
-	@$ket_wisata = @$_POST['ket_wisata'];
+	@$deskripsi = @$_POST['deskripsi'];
+	@$gambar = @$_POST['gambar'];
 	
 	move_uploaded_file(@$asal, "../data/".@$tujuan);
 	
@@ -16,11 +15,11 @@
 		
 	case "add" :
 	
-	$sql=$db->prepare("INSERT INTO wisata(nama_wisata, alamat_wisata, jam_oprasional, ket_wisata) VALUES (:nama_wisata, :alamat_wisata, :jam_oprasional, :ket_wisata)");
+	$sql=$db->prepare("INSERT INTO wisata( id_wisata, nama_wisata, deskripsi, gambar) VALUES ( :id_wisata, :nama_wisata, :deskripsi, :gambar)");
+	$sql->bindParam(':id_wisata', @$id_wisata);
 	$sql->bindParam(':nama_wisata', @$nama_wisata);
-	$sql->bindParam(':alamat_wisata', @$alamat_wisata);
-	$sql->bindParam(':jam_oprasional', @$jam_oprasional);
-	$sql->bindParam(':ket_wisata', @$ket_wisata);
+	$sql->bindParam(':deskripsi', @$deskripsi);
+	$sql->bindParam(':gambar', @$gambar);
 	$sql->execute();
 	
 	echo"
@@ -34,12 +33,11 @@
 	
 	case "edit" :
 	
-	$sql=$db->prepare("UPDATE wisata SET nama_wisata = :nama_wisata, alamat_wisata = :alamat_wisata, jam_oprasional = :jam_oprasional, ket_wisata = :ket_wisata WHERE id_wisata = :id_wisata");
+	$sql=$db->prepare("UPDATE wisata SET id_wisata = :id_wisata, nama_wisata = :nama_wisata, deskripsi = :deskripsi, gambar = :gambar WHERE id_wisata = :id_wisata");
 	$sql->bindParam(':id_wisata', @$id_wisata);
 	$sql->bindParam(':nama_wisata', @$nama_wisata);
-	$sql->bindParam(':alamat_wisata', @$alamat_wisata);
-	$sql->bindParam(':jam_oprasional', @$jam_oprasional);
-	$sql->bindParam(':ket_wisata', @$ket_wisata);
+	$sql->bindParam(':deskripsi', @$deskripsi);
+	$sql->bindParam(':gambar', @$gambar);
 	$sql->execute();
 	
 	echo"

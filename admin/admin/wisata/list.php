@@ -28,7 +28,7 @@
 				<td><?php echo $hasil['id_wisata'];?></td>
 				<td><?php echo $hasil['nama_wisata'];?></td>
 				<td><?php echo $hasil['deskripsi'];?></td>
-				<td><img src="../data/<?php echo $hasil['gambar'];?>" /></td>
+				<td><img src="../img/wisata/<?php echo $hasil['gambar'];?>" /></td>
 				<td>
 					<button class="btn btn-warning" onclick="javascript:window.location.href='index.php?module=wisata&action=add&id=<?php echo $hasil['id_wisata'];?>'">EDIT</button>
 					<button class="btn btn-danger" onclick="javascript:window.location.href='index.php?module=wisata&action=proses&id=<?php echo $hasil['id_wisata'];?>&proc=delete'">DELETE</button>

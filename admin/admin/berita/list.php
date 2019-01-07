@@ -34,7 +34,7 @@
 				<td><?php echo $hasil['judul'];?></td>
 				<td><?php echo $hasil['isi'];?></td>
 				<td><?php echo $hasil['tgl_post'];?></td>
-				<td><img src="../data/<?php echo $hasil['gambar'];?>" /></td>
+				<td><img src="../img/berita/<?php echo $hasil['gambar'];?>" /></td>
 				<td><?php echo $hasil['tgl_last_update'];?></td>
 				<td><?php echo $hasil['user'];?></td>
 				<td><?php echo $hasil['views'];?></td>
